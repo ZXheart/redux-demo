@@ -29,7 +29,7 @@ export type AsyncDecrementAction = ThunkAction<
 export const fetchSubNumber = (): AsyncDecrementAction => {
   return async (dispatch, getState) => {
     console.log(getState());
-    const random = Math.floor(Math.random() * 8 - 1 + 2);
+    const random = Math.floor(Math.random() * 8 + 1 - 2) + 2;
     const response = await fetch(
       `https://jsonplaceholder.typicode.com/todos/${random}`,
     );
